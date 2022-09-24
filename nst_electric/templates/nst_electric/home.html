@@ -1,0 +1,223 @@
+<!-- Ничего здесь не меняй! -->
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Электромонтажные работы в Слониме</title>
+    <link rel="stylesheet" href="{% static 'nst_electric/css/index.css' %}">
+    <link rel="shortcut icon" href="{% static 'nst_electric/favicon/favicon.png' %}"/>
+</head>
+<body>
+<main>
+    <div class="content">
+        <nav class="navigate">
+            <ul class="navigate-body" data-line-parent>
+                {% for navigate in context.navigates %}
+                <li><a class="nav-link" data-line-item="{{ navigate.link }}">{{ navigate.menu_navigate }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <button class="c-hamburger c-hamburger-line">
+            <span>Menu</span>
+        </button>
+        <div id="menu">
+            <div class="menu-body">
+                {% for navigate in context.navigates %}
+                <a href="{{ navigate.href }}" class="menu-link">{{ navigate.menu_navigate }}</a>
+                {% endfor%}
+            </div>
+        </div>
+        <div class="add-order">
+            <img class="close" src="https://yt3.ggpht.com/ytc/AKedOLRiZt70NbGTQUJp8fDDnKce3zoWdwXrgElSGBTY=s900-c-k-c0x00ffffff-no-rj" alt="close">
+            <h3 class="title add-order-title">Заказать услугу</h3>
+            <form method="post" class="form-add-order">
+                {% csrf_token %}
+                {% for field in context.form %}
+                    {{ field }}
+                {% endfor %}
+                <input class="input-submit" type="submit" value="Отправить">
+        </form>
+        </div>
+        <div data-line-block="block_1" id="home"  class="main-content">
+            <div class="conteiner">
+                <div class="flex-body">
+                    <div class="body-main-content">
+                        <h1>Электромонтажные работы</h1>
+                        <p class="main-info">По Слониму и Слонимскому району</p>
+                        <p class="main-info">Контакты</p>
+                        <p class="main-number">+375 (29) 554-45-06</p>
+                        <button class="button-add-service">Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-body">
+            <div data-line-block="block_2" id="our-services" class="our-services">
+                <h3 class="title">Наши услуги</h3>
+                <p>Все наши услуги распростроняются по Слониму и Слонимскому району</p>
+                <div class="our-services-body">
+                    <div class="cards">
+                        <div class="card card1">
+                            <div class="card-text">
+                                <p>Демонтаж кабеля, полная замена электропроводки.</p>
+                                <p>Установка заземления</p>
+                            </div>
+                        </div>
+                        <div class="card card2">
+                            <div class="card-text">
+                                <p>Штраба в штукатурке, газосиликатном блоке, кирпиче, бетоне.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card card3">
+                            <div class="card-text">
+                                <p>Установка подрозетника в кирпиче(с устройством ниши).</p>
+                                <p>Перенос и замена розеток и выключателей.</p>
+                                <p>Подключение бытовой техники.</p>
+                            </div>
+                        </div>
+                        <div class="card card4">
+                            <div class="card-text">
+                                <p>Установка и подключение люстр и светильников,</p>
+                                <p>коммуникаций и распределительной коробки.</p>
+                                <p>Монтаж и сборка электрощитка.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-line-block="block_3" id="stages-work" class="stages-work">
+                <h3 class="title">Этапы работы</h3>
+                <div class="stages-work-body">
+                    <div class="stages-grid">
+                        {% for stage in context.stages %}
+                        <div class="stage">
+                            <h4>{{ stage.stage }}</h4>
+                            <p>{{ stage.description }}</p>
+                            <div class="background-number">{{ stage.number }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div data-line-block="block_4" id="advantages" class="advantages">
+                <div class="conteiner">
+                    <h3 class="title advantages-title">Приемущества</h3>
+                    <div class="advantages-body">
+                        {% for advantage in context.advantages %}
+                        <div class="advantage">
+                            <img src="{{ advantage.image_src }}" alt="img">
+                            <p>{{ advantage.text }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div data-line-block="block_5" id="price" class="price">
+                <h3 class="title">Прайс</h3>
+                <div class="title-price">Черновая электрика</div>
+                <div class="price-body">
+                    <div class="price-column">
+                        {% for d in context.draft1 %}
+                        <div class="type">
+                            <p class="price-type">{{ d.service }}</p>
+                            <p >от {{ d.price }} руб.</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="price-column">
+                        {% for d in context.draft2 %}
+                        <div class="type">
+                            <p class="price-type">{{ d.service }}</p>
+                            <p >от {{ d.price }} руб.</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="title-price">Чистовая электрика</div>
+                <div class="price-body">
+                    <div class="price-column">
+                        {% for s in context.clean1 %}
+                        <div class="type">
+                            <p class="price-type">{{ s.service }}</p>
+                            <p >от {{ s.price }} руб.</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="price-column">
+                        {% for s in context.clean2 %}
+                        <div class="type">
+                            <p class="price-type">{{ s.service }}</p>
+                            <p >от {{ s.price }} руб.</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="title-price">Виды услуг для юридических лиц</div>
+                <div class="price-body">
+                    <div class="price-column">
+                       {% for l in context.legal1 %}
+                        <div class="type">
+                            <p class="price-type">{{ l.service }}</p>
+                            <p >от {{ l.price }} руб.</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="price-column">
+                        {% for l in context.legal2 %}
+                        <div class="type">
+                            <p class="price-type">{{ l.service }}</p>
+                            <p >от {{ l.price }} руб.</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div data-line-block="block_6" id="reviews" class="reviews">
+                <h3 class="title">Наши отзывы</h3>
+                {% for review in context.reviews %}
+                <div class="reviws-body">
+                    <img class="avatar" src="{{ review.image_src }}" alt="img">
+                    <div class="review-text">
+                        <span>{{ review.name_surname }}</span>
+                        <br>
+                        <p>{{ review.review }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div data-line-block="block_7" id="order" class="order">
+            <div class="order-wrapper">
+                <div class="order-body">
+                    <h3 class="title order-title">Заказать услугу</h3>
+                    <p>С удовольствием отвечу на ваши вопросы</p>
+                    <form method="post" class="form">
+                            {% csrf_token %}
+                            {% for field in context.form %}
+                                {{ field.errors }}
+                                {{ field }}
+                            {% endfor %}
+                            <input class="input-submit" type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" class="footer">
+            <div class="mail-number">
+                <a href="tel:+375295544506">+375295544506</a>
+                <a href="mailto:ok@nst-group.by">ok@nst-group.by</a>
+            </div>
+            <p>© Все права защищены 2022</p>
+            <p>УНП 592000523</p>
+        </footer>
+    </div>
+</main>
+<script src="{% static 'nst_electric/js/index.js' %}" defer></script>
+</body>
+</html>

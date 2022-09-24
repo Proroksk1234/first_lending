@@ -1,0 +1,41 @@
+body {
+  background: url("https://img.freepik.com/free-photo/white-brick-wall_1194-7432.jpg?w=1060&t=st=1661768760~exp=1661769360~hmac=182f0987ed0b4349f6b4a9e3a67c38960a52407e1c20841ecf34ab3f2d66a554");
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-is-add {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 40px;
+}
+.button-go-home {
+  background-color: rgb(255 220 18);
+  margin-top: 60px;
+  width: 230px;
+  height: 58px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button-go-home:hover {
+  background-color: white;
+  border: 3px solid rgb(255 220 18);
+}
+.button-href {
+    color: black;
+    text-decoration: none;
+}
