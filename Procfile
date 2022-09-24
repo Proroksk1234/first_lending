@@ -1,3 +1,3 @@
-web: gunicorn search_board.wsgi:application --log-file - --log-level debug
+web: gunicorn electrical.wsgi:application --log-file - --log-level debug
 heroku ps:scale web=1
 manage.py migrate
