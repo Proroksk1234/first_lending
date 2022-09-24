@@ -26,7 +26,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '*',
     '0.0.0.0',
-    'electrical.herokuapp.com',
+    'electrical-nst.herokuapp.com',
     '127.0.0.1'
 ]
 
