@@ -722,7 +722,7 @@ h4 {
     height: 500px;
   }
   .order {
-    height: 750px;
+    height: 600px;
   }
   .order-body input {
     width: 60%;
@@ -748,6 +748,6 @@ h4 {
 }
 @media all and(display-mode: fullscreen) {
   .order {
-    height: calc(100vh - 35%);
+    height: 35vh
   }
 }
