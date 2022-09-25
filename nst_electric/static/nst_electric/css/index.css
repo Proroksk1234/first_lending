@@ -648,7 +648,7 @@ h4 {
 
 @media screen and (max-width: 675px) {
   .form-add-order input {
-  font-size: 17px;
+  font-size: 15px;
   }
   h1 {
     font-size: 24px;
@@ -704,7 +704,7 @@ h4 {
 }
 @media screen and (max-height: 520px) {
   .form-add-order input {
-  font-size: 16px;
+  font-size: 12px;
   }
   .order-body {
     padding-top: 40px;
@@ -726,7 +726,7 @@ h4 {
 }
 @media screen and (max-height: 410px) {
   .form-add-order input {
-  font-size: 15px;
+  font-size: 10px;
   }
   .body-main-content {
     height: 500px;
@@ -744,7 +744,7 @@ h4 {
 }
 @media screen and (max-height: 335px) {
   .form-add-order input {
-  font-size: 13px;
+  font-size: 5px;
   }
   .menu-body {
     gap: 5px;
