@@ -533,7 +533,7 @@ h4 {
   display: none;
 }
 
-@media all and(display-mode: browser) {
+@media all and(display-mode: fullscreen) {
   .nav-active {
     display: block;
   }
