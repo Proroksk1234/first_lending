@@ -534,7 +534,116 @@ h4 {
 }
 
 @media all and(display-mode: fullscreen) {
-
+  .nav-active {
+    display: block;
+  }
+  .navigate {
+    display: none;
+  }
+  .c-hamburger {
+    display: block;
+  }
+  .main-info {
+    padding-top: 30px;
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  .title {
+    padding-top: 50px;
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
+  .our-services-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .our-services p {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 8% 30px 8%;
+  }
+  .card-text {
+    line-height: 20px;
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+  }
+  .card-text p {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+  }
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    height: 300px;
+  }
+  .stages-work-body {
+    margin: auto 20px;
+  }
+  .stages-grid {
+    gap: 30px;
+  }
+  .price {
+    margin: 0;
+  }
+  .price > * {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .price-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .title-price {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .type {
+    min-width: 100%;
+  }
+  .price-type {
+    width: 70%;
+  }
+  .price-body p {
+    font-size: 16px;
+  }
+  .reviews {
+    margin: 0 10%;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .reviws-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .avatar {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .review-text p {
+    width: 100%;
+    text-align: center;
+  }
+  .review-text span {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .advantages-body {
+    margin: 0;
+  }
+  .add-order-title {
+    padding-top: 20px;
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-width: 1120px) {
@@ -693,6 +802,7 @@ h4 {
 }
 
 @media screen and (max-width: 480px) {
+
   .body-main-content {
     padding-left: 30px;
   }
