@@ -647,6 +647,9 @@ h4 {
 }
 
 @media screen and (max-width: 675px) {
+  .form-add-order input {
+  font-size: 17px;
+  }
   h1 {
     font-size: 24px;
   }
@@ -700,6 +703,9 @@ h4 {
   }
 }
 @media screen and (max-height: 520px) {
+  .form-add-order input {
+  font-size: 16px;
+  }
   .order-body {
     padding-top: 40px;
   }
@@ -719,6 +725,9 @@ h4 {
   }
 }
 @media screen and (max-height: 410px) {
+  .form-add-order input {
+  font-size: 15px;
+  }
   .body-main-content {
     height: 500px;
   }
@@ -734,6 +743,9 @@ h4 {
   }
 }
 @media screen and (max-height: 335px) {
+  .form-add-order input {
+  font-size: 13px;
+  }
   .menu-body {
     gap: 5px;
   }
