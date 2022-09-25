@@ -11,5 +11,5 @@ class FormRequest(forms.Form):
     email = forms.EmailField(label='Ваш e-mail', widget=forms.EmailInput(
         attrs={'placeholder': 'Введите ваш e-mail', 'oninvalid': "this.setCustomValidity('Введите корректный e-mail')", 'oninput':"setCustomValidity('')"}))
     number = forms.CharField(label='Ваш номер телефона', widget=forms.TextInput(
-        attrs={'placeholder': 'Введите ваш номер телефона', 'required pattern': phone_regex,
+        attrs={'placeholder': 'Введите номер телефона', 'required pattern': phone_regex,
                'oninvalid': "this.setCustomValidity('Введите корректный номер телефона в формате(+375)')", 'oninput':"setCustomValidity('')"}))
