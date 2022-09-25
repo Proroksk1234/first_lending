@@ -127,7 +127,7 @@ h4 {
   height: 240px;
 }
 .card4 {
-  background: url("https://thumb.tildacdn.com/tild6465-3930-4739-a465-393262623965/-/format/webp/thumb_840x300.jpeg");
+  background: url("https://bigfoto.name/uploads/posts/2022-02/1644105250_28-bigfoto-name-p-kreplenie-raspayachnoi-korobki-v-interere-55.png");
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -385,7 +385,7 @@ h4 {
   position: absolute;
   left: 10px;
   top: 10px;
-  width: 40px;
+  width: 30px;
   cursor: pointer;
 }
 .add-order-title {
@@ -722,7 +722,13 @@ h4 {
     height: 500px;
   }
   .order {
-    height: 500px;
+    height: 750px;
+  }
+  .order-body input {
+    width: 60%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 18px;
   }
   .add-order {
     justify-content: space-between;
