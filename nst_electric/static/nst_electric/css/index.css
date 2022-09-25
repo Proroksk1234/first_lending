@@ -81,6 +81,7 @@ h4 {
   text-transform: uppercase;
   font-size: 18px;
   padding-bottom: 8px;
+  cursor: pointer;
 }
 .nav-link:hover {
   color: white;
