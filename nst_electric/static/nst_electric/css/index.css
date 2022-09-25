@@ -81,7 +81,6 @@ h4 {
   text-transform: uppercase;
   font-size: 18px;
   padding-bottom: 8px;
-  cursor:pointer;
 }
 .nav-link:hover {
   color: white;
@@ -101,7 +100,7 @@ h4 {
   padding: 0 20px 0 20px;
 }
 .card1 {
-  background: url("https://static.tildacdn.com/tild6264-6138-4639-b162-333864316164/---1024x576.jpg");
+  background: url("https://bigfoto.name/uploads/posts/2021-12/1639912027_25-bigfoto-name-p-demontazh-v-khoroshem-kachestve-v-interere-49.jpg");
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -150,7 +149,7 @@ h4 {
 .card-text {
   left: 30px;
   bottom: 40px;
-  color: black;
+  color: rgba(7, 33, 166);
   font-size: 17px;
   position: absolute;
   line-height: 30px;
@@ -386,11 +385,11 @@ h4 {
   position: absolute;
   left: 10px;
   top: 10px;
-  width: 25px;
+  width: 40px;
   cursor: pointer;
 }
 .add-order-title {
-  padding-top: 0;
+  padding-top: 10px;
 }
 .form-add-order {
   display: flex;
@@ -531,109 +530,6 @@ h4 {
 }
 .nav-active {
   display: none;
-}
-
-@media all and(display-mode: fullscreen) {
-  h1 {
-    font-size: 45px;
-  }
-  .title {
-    padding-top: 50px;
-    font-size: 40px;
-    padding-bottom: 40px;
-  }
-  .our-services-body {
-    display: flex;
-    flex-direction: column;
-  }
-  .our-services p {
-    font-size: 25px;
-    font-weight: bold;
-    margin: 0 8% 30px 8%;
-  }
-  .card-text {
-    line-height: 20px;
-    bottom: 10px;
-    left: 20px;
-    right: 20px;
-  }
-  .card-text p {
-    margin: 0 0 10px 0;
-    font-size: 18px;
-  }
-  .card1,
-  .card2,
-  .card3,
-  .card4 {
-    height: 300px;
-  }
-  .stages-work-body {
-    margin: auto 20px;
-  }
-  .stages-grid {
-    gap: 30px;
-  }
-  .price {
-    margin: 0;
-  }
-  .price > * {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .price-body {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 20px;
-  }
-  .title-price {
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: 30px;
-  }
-  .type {
-    min-width: 100%;
-  }
-  .price-type {
-    width: 70%;
-  }
-  .price-body p {
-    font-size: 16px;
-  }
-  .reviews {
-    margin: 0 10%;
-    padding-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .reviws-body {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .avatar {
-    height: 200px;
-    width: 200px;
-    margin: 0 auto;
-  }
-  .review-text p {
-    width: 100%;
-    text-align: center;
-  }
-  .review-text span {
-    margin-top: 10px;
-    text-align: center;
-  }
-  .advantages-body {
-    margin: 0;
-  }
-  .order {
-  height: 70vh;
-  }
-  .add-order-title {
-    padding-top: 20px;
-    font-size: 36px;
-  }
 }
 
 @media screen and (max-width: 1120px) {
@@ -784,7 +680,7 @@ h4 {
     padding-bottom: 50px;
   }
   .order-body input {
-    width: 80%;
+    width: 60%;
     height: 50px;
     padding-left: 20px;
     font-size: 18px;
@@ -792,7 +688,6 @@ h4 {
 }
 
 @media screen and (max-width: 480px) {
-
   .body-main-content {
     padding-left: 30px;
   }
@@ -843,5 +738,10 @@ h4 {
   }
   .menu-link {
     font-size: 18px;
+  }
+}
+@media all and(display-mode: fullscreen) {
+  .order {
+    height: calc(100vh - 35%);
   }
 }

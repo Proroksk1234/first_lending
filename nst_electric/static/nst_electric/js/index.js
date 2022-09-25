@@ -118,8 +118,10 @@ window.onload=function(){
 const addOrderButton = document.querySelector('.button-add-service')
 const closeWindow =document.querySelector('.close')
 const addOrderWindow =document.querySelector('.add-order')
+let addOrderIsShow = false
 const addOrderWindowHide = ()=>{
     addOrderWindow.style.display='none'
+    addOrderIsShow=false
 }
 const addOrderWindowShow = ()=>{
     if(window.screen.height<=400){
@@ -128,8 +130,18 @@ const addOrderWindowShow = ()=>{
     else{
         addOrderWindow.style.display='block'
     }
+    addOrderIsShow=true
+}
+const addOrderResize =()=>{
+    if(addOrderIsShow&&window.screen.height>=400){
+        addOrderWindow.style.display='block'
+    }
+    if(addOrderIsShow&&window.screen.height<=400){
+        addOrderWindow.style.display='flex'
+    }
 }
 
+window.addEventListener('resize',addOrderResize)
 addOrderButton.addEventListener('click',addOrderWindowShow)
 closeWindow.addEventListener('click',addOrderWindowHide)
 document.querySelector('.c-hamburger').addEventListener('click',function(e){
