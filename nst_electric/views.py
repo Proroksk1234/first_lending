@@ -36,7 +36,7 @@ def Home(request):
             email = form.cleaned_data['email']
             username = form.cleaned_data['username']
             number = form.cleaned_data['number']
-            result_number = re.match(r'^(\+375|80|375)(29|25|44|33)(\d{3})(\d{2})(\d{2})$', number)
+            result_number = re.match(r'^(\+375|80|375)(\(33\)|\(44\)|\(25\)|\(29\)|29|25|44|33)(\d{3})(\d{2})(\d{2})$', number)
             result_username = re.match(r'^[а-яА-ЯёЁa-zA-Z]{1,20}$', username)
             result_email = re.match(r"^[-\w\.]+@([-\w]+\.)+[-\w]{2,4}$", email)
             if bool(result_username) == False or bool(result_number) == False or bool(result_email) == False:
