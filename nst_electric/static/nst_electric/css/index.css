@@ -534,19 +534,6 @@ h4 {
 }
 
 @media all and(display-mode: fullscreen) {
-  .nav-active {
-    display: block;
-  }
-  .navigate {
-    display: none;
-  }
-  .c-hamburger {
-    display: block;
-  }
-  .main-info {
-    padding-top: 30px;
-    font-size: 18px;
-  }
   h1 {
     font-size: 45px;
   }
