@@ -640,6 +640,9 @@ h4 {
   .advantages-body {
     margin: 0;
   }
+  .order {
+  height: 70vh;
+  }
   .add-order-title {
     padding-top: 20px;
     font-size: 36px;
