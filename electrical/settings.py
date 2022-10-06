@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'electrical.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'electric',
+        'USER': 'postgres',
+        'PASSWORD': 'Proroksk1234',
+        'HOST': '46.36.221.98',
+        'PORT': '5432',
     }
 }
 
@@ -129,12 +133,6 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    ("js", os.path.join(STATIC_ROOT, 'js')),
-    ("css", os.path.join(STATIC_ROOT, 'css')),
-    ("images", os.path.join(STATIC_ROOT, 'images')),
-    ("fonts", os.path.join(STATIC_ROOT, 'fonts')),
-)
 
 CACHES = {
     'default': {
